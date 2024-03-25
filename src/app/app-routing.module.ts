@@ -7,6 +7,7 @@ const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'user',component:UserLayoutComponent,children:[
     {path:'dashboard',loadChildren:()=>import('./views/userviews/dashborad/dashborad.module').then(m=>m.DashboradModule)},
+    {path:'',loadChildren:()=>import('./views/userviews/dashborad/dashborad.module').then(m=>m.DashboradModule)}
   ]}
 ];
 
